@@ -29,12 +29,9 @@
 - [x] GitHub Actionsデプロイワークフロー作成（`.github/workflows/deploy.yml`）
 - [x] GitHubリポジトリ作成・push（https://github.com/qchizu/qchizu-info プライベート）
 - [x] トップページをpost-21の内容に変更
+- [x] CSSの調整（シンプル化、テーマカラー維持、見出しスタイル整備）
 
 ### 未完了の事項
-
-- [ ] **CSSの調整**
-  - 現行サイトをベースにし、テーマカラー（#E6B422）は維持
-  - より洗練された見やすいデザインに改善
 
 - [ ] **記事の構成整理**
   - 固定ページと投稿に分類
