@@ -5,15 +5,108 @@
 <header class="header">
   <div class="header-inner">
     <a href="/" class="site-title">全国Q地図</a>
-    <nav class="nav">
-      <a href="https://qchizu.jp" target="_blank" rel="noopener noreferrer">地図を開く</a>
+
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+      <span class="hamburger"></span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <div class="nav-item dropdown">
+        <button class="nav-link dropdown-toggle" aria-expanded="false">
+          全国Q地図について
+          <span class="arrow"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="/about">全国Q地図について</a></li>
+          <li><a href="/donation">サポートする</a></li>
+          <li><a href="/mail">連絡先</a></li>
+          <li><a href="/reprint">転載・利用許諾</a></li>
+          <li><a href="/improve">地図追加・機能追加</a></li>
+          <li><a href="/case">活用事例</a></li>
+          <li><a href="/minna">みんなのQ地図</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-item dropdown">
+        <button class="nav-link dropdown-toggle" aria-expanded="false">
+          使い方ガイド
+          <span class="arrow"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="/tile">Q地図タイルの特長</a></li>
+          <li><a href="/tile-pond">全国ため池マップ</a></li>
+          <li><a href="/road-structures">道路構造物マップ</a></li>
+          <li><a href="/shinrinkihonzu">森林基本図</a></li>
+          <li><a href="/rrim">赤色立体地図</a></li>
+          <li><a href="/stereo">実体視機能</a></li>
+          <li class="divider"></li>
+          <li><a href="/guides" class="see-all">すべてのガイドを見る</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-item">
+        <a href="/posts" class="nav-link">ブログ</a>
+      </div>
+
+      <div class="nav-item">
+        <a href="https://maps.qchizu.jp" target="_blank" rel="noopener noreferrer" class="nav-link btn-map">
+          地図を開く
+        </a>
+      </div>
     </nav>
   </div>
 </header>
 
+<script>
+  // ハンバーガーメニューの制御
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav');
+
+  menuToggle?.addEventListener('click', () => {
+    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+    nav?.classList.toggle('is-open');
+  });
+
+  // ドロップダウンの制御
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const parent = toggle.parentElement;
+      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+
+      // 他のドロップダウンを閉じる
+      dropdownToggles.forEach(other => {
+        if (other !== toggle) {
+          other.setAttribute('aria-expanded', 'false');
+          other.parentElement?.classList.remove('is-open');
+        }
+      });
+
+      toggle.setAttribute('aria-expanded', String(!isExpanded));
+      parent?.classList.toggle('is-open');
+    });
+  });
+
+  // ドロップダウン外クリックで閉じる
+  document.addEventListener('click', (e) => {
+    const target = e.target as Element;
+    if (!target.closest('.dropdown')) {
+      dropdownToggles.forEach(toggle => {
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.parentElement?.classList.remove('is-open');
+      });
+    }
+  });
+</script>
+
 <style>
   .header {
     background-color: var(--theme-color);
+    position: relative;
+    z-index: 100;
   }
 
   .header-inner {
@@ -28,20 +121,221 @@
   .site-title {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #fff;
+    color: #333;
     text-decoration: none;
   }
 
   .site-title:hover {
-    color: #fff;
+    color: #333;
   }
 
-  .nav a {
+  /* ハンバーガーメニューボタン */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 101;
+  }
+
+  .hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #fff;
+    position: relative;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s;
+  }
+
+  .hamburger::before {
+    top: -7px;
+  }
+
+  .hamburger::after {
+    top: 7px;
+  }
+
+  .menu-toggle[aria-expanded="true"] .hamburger {
+    background: transparent;
+  }
+
+  .menu-toggle[aria-expanded="true"] .hamburger::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .menu-toggle[aria-expanded="true"] .hamburger::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  /* ナビゲーション */
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .nav-item {
+    position: relative;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 0.75rem;
     color: #333;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #333;
+  }
+
+  .arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #333;
+    margin-left: 0.25rem;
+    transition: transform 0.2s;
+  }
+
+  .dropdown.is-open .arrow {
+    transform: rotate(180deg);
+  }
+
+  /* ドロップダウンメニュー */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    list-style: none;
+    padding: 0.5rem 0;
+    min-width: 200px;
+    margin: 0;
+    z-index: 100;
+  }
+
+  .dropdown.is-open .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu li {
+    margin: 0;
+  }
+
+  .dropdown-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+
+  .dropdown-menu .divider {
+    height: 1px;
+    background: #eee;
+    margin: 0.5rem 0;
+  }
+
+  .dropdown-menu .see-all {
+    color: #0066cc;
     font-weight: bold;
   }
 
-  .nav a:hover {
-    color: #333;
+  .dropdown-menu .see-all:hover {
+    color: #cc0033;
+  }
+
+  /* 地図を開くボタン */
+  .btn-map {
+    background-color: #fff;
+    color: #333 !important;
+    border-radius: 4px;
+  }
+
+  .btn-map:hover {
+    background-color: #f5f5f5;
+  }
+
+  /* モバイル対応 */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+
+    .nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--theme-color);
+      flex-direction: column;
+      padding: 1rem;
+      gap: 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav.is-open {
+      display: flex;
+    }
+
+    .nav-item {
+      width: 100%;
+    }
+
+    .nav-link {
+      width: 100%;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+    }
+
+    .dropdown-menu {
+      position: static;
+      box-shadow: none;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 0;
+      margin-top: 0.25rem;
+    }
+
+    .btn-map {
+      margin-top: 0.5rem;
+      justify-content: center;
+    }
   }
 </style>

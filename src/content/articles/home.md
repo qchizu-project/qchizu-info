@@ -2,6 +2,7 @@
 title: ""
 description: "地理院地図を拡張した、各種地形図・地図情報の統合閲覧サイト"
 date: 2021-11-13
+type: page
 ---
 
 ![](/images/aroPjHCt_400x400-1_0504065535.png)　**地図の閲覧は[こちら](https://maps.qchizu.jp)**　![](https://info.qchizu.jp/wp-content/uploads/2024/05/aroPjHCt_400x400-1_0504065535.png)

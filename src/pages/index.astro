@@ -4,7 +4,7 @@ import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const topPage = await getEntry('articles', 'post-21');
+const topPage = await getEntry('articles', 'home');
 const { Content } = topPage ? await render(topPage) : { Content: null };
 ---
 

@@ -9,6 +9,7 @@ const articles = defineCollection({
     description: z.string(),
     date: z.coerce.date(),
     order: z.number().optional(),
+    type: z.enum(['page', 'guide', 'post']).default('post'),
   }),
 });
 
