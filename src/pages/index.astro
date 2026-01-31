@@ -14,7 +14,7 @@ const { Content } = topPage ? await render(topPage) : { Content: null };
     <div class="top-content">
       {Content ? <Content /> : <p>コンテンツが見つかりません。</p>}
     </div>
-    <p class="articles-link"><a href="/articles">記事一覧</a></p>
+    <p class="articles-link"><a href="/guides">ガイド一覧</a>　|　<a href="/posts">ブログ一覧</a></p>
   </main>
   <Footer />
 </Base>

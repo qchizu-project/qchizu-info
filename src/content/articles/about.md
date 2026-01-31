@@ -21,29 +21,37 @@ type: page
 
 ## 全国Q地図
 
-[更新情報](https://info.qchizu.jp/qchizu/update/)
+[更新情報](/update)
 
 ソースコード（GitHub）　全国Q地図(現在非公開です)　[全国Q地図MapLibre版](https://github.com/qchizu/qchizu_maplibre)
 
 ## 全国Q地図のコンテンツ（Q地図タイル）
 
-[Q地図タイルの特長](https://info.qchizu.jp/qchizu/tile/)
+### Q地図タイルの特長
 
-[全国農業用ため池マップ](https://info.qchizu.jp/qchizu/tile/tile-pond/)
+#### 正確な地図を正確なままに
 
-[全国道路構造物マップシリーズ](https://info.qchizu.jp/qchizu/tile/mlit_road/)
+正確に作られた地形図を正確に現在の地形図と重ね合わせができるよう、丁寧にジオリファレンス（位置合わせ）を行っています。ただし、地形図の測量誤差や、印刷図の歪み、デジタル化する際の歪みなど、一部補正できない部分もあるため、利用に当たっては御注意ください。
 
-[全国バス停留所マップ](https://info.qchizu.jp/qchizu/tile/bus-stop/)
+#### 精細な地形図を精細なままに
 
-[森林基本図](https://info.qchizu.jp/qchizu/tile/shinrinkihonzu/)
+細かい部分まではっきりと確認できるよう、十分なズームレベルで地図タイルを作成しています。
 
-[全国の等高線図が閲覧できます](https://info.qchizu.jp/qchizu/tile/tool-contour/)
+[全国農業用ため池マップ](/tile-pond)
 
-[京都府森林基本図の位置ずれ補正](https://info.qchizu.jp/qchizu/26p_kyoto_f/)
+[全国道路構造物マップシリーズ](/road-structures)
+
+[全国バス停留所マップ](/bus-stop)
+
+[森林基本図](/shinrinkihonzu)
+
+[全国の等高線図が閲覧できます](/tool-contour)
+
+[京都府森林基本図の位置ずれ補正](/kyoto-forest-map-correction)
 
 Q地図タイルの一覧　→　[G空間情報センター（全国Q地図）](https://www.geospatial.jp/ckan/organization/qchizu)　※鋭意作成中です。
 
-[みんなのQ地図](https://info.qchizu.jp/Minna/)～あなたの地図をQ地図に～
+[みんなのQ地図](/minna)～あなたの地図をQ地図に～
 
 ## 全国Q地図の機能
 
@@ -51,14 +59,14 @@ Q地図タイルの一覧　→　[G空間情報センター（全国Q地図）]
 
 ## 利用手続き
 
-[全国Q地図の転載・利用許諾等](https://info.qchizu.jp/qchizu/reprint/)
+[全国Q地図の転載・利用許諾等](/reprint)
 
-[タイル配信～QGISや地図サイトからQ地図タイルが利用できます～](https://info.qchizu.jp/tile-api/)
+[タイル配信～QGISや地図サイトからQ地図タイルが利用できます～](/tile-api)
 
 ## 全国Q地図の改良
 
-[全国Q地図への地図追加・機能追加](https://info.qchizu.jp/qchizu/improve/)
+[全国Q地図への地図追加・機能追加](/minna)
 
 ## メディア・雑誌・Webサイト等掲載履歴、活用事例
 
-[活用事例、掲載・紹介事例](https://info.qchizu.jp/qchizu/case/)
+[活用事例、掲載・紹介事例](/case)
