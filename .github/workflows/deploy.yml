@@ -1,17 +1,18 @@
 name: Deploy
 
+# タグがプッシュされたときに実行
 on:
   push:
     tags:
-      - '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]*'
+      - 'v*'
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      # リポジトリのコードを取得
+      - uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -25,6 +26,7 @@ jobs:
       - name: Build
         run: npm run build
 
+      # SSH接続の準備
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
@@ -32,6 +34,7 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -p 10022 ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
+      # rsyncでデプロイ
       - name: Deploy with rsync
         run: |
           rsync -avz --delete \
@@ -39,4 +42,10 @@ jobs:
             --exclude '.git' \
             --exclude '.github' \
             ./dist/ \
-            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/qchizu/qchizu.jp/public_html/info.qchizu.jp/
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/qchizu/qchizu.jp/public_html/test-info.qchizu.jp/
+
+      # GitHubリリースを作成
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          generate_release_notes: true
