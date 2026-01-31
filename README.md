@@ -30,8 +30,10 @@ qchizu-info/
 ## デプロイ
 
 1. 記事を編集・追加し、master ブランチに push
-2. タグを作成: `git tag YYYY-MM-DD && git push origin YYYY-MM-DD`
+2. タグを作成: `git tag v20260131 && git push origin v20260131`
 3. GitHub Actions が自動でビルド・Xserver へデプロイ
+
+現在はテスト環境（https://test-info.qchizu.jp ）にデプロイしています。
 
 ## 記事の追加・編集
 

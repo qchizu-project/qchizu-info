@@ -10,7 +10,9 @@
 - **SSG**: Astro 5.x
 - **記事形式**: Markdown（Content Collections）
 - **ホスティング**: Xserver
-- **デプロイ**: GitHub Actions（タグ push でトリガー）
+- **デプロイ**: GitHub Actions（`v*` タグ push でトリガー）
+- **テスト環境**: https://test-info.qchizu.jp （構築中）
+- **本番環境**: https://info.qchizu.jp （現在はWordPressで運用中）
 
 ---
 
@@ -49,11 +51,16 @@
   - 公用文の書き方に倣う
   - 例: 「及び」「又は」「御利用」など
 
-- [ ] **GitHub Secretsの登録**
+- [x] **GitHub Secretsの登録**
   - `SSH_PRIVATE_KEY`: SSH秘密鍵
   - `SSH_HOST`: Xserverホスト名
   - `SSH_USER`: SSHユーザー名
   - 既存のqchizuリポジトリと共有可能
+
+- [x] **テスト環境構築**
+  - `test-info.qchizu.jp` にデプロイする構成に変更
+  - トリガーを `v*` タグに統一（qchizu-mapsと同じ）
+  - リリースノート自動生成を追加
 
 - [ ] **リダイレクト設定**
   - 現行サイトのURLから一部変更になるため、リダイレクトを設定
@@ -138,7 +145,7 @@ order: 10
 ## デプロイ手順
 
 1. 記事を編集・追加
-2. main/master ブランチに push
+2. master ブランチに push
 3. タグを作成: `git tag v20260131 && git push origin v20260131`
 4. GitHub Actions が自動でビルド・デプロイ
 
