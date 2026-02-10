@@ -1,0 +1,288 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  currentSlug?: string;
+}
+
+const { currentSlug } = Astro.props;
+
+const allArticles = await getCollection('articles');
+
+// guide型: order → date でソート
+const guides = allArticles
+  .filter((a) => a.data.type === 'guide')
+  .sort((a, b) => {
+    const orderA = a.data.order ?? 999;
+    const orderB = b.data.order ?? 999;
+    if (orderA !== orderB) return orderA - orderB;
+    return a.data.date.getTime() - b.data.date.getTime();
+  });
+
+// page型: homeを除外、order → title でソート
+const pages = allArticles
+  .filter((a) => a.data.type === 'page' && a.id !== 'home')
+  .sort((a, b) => {
+    const orderA = a.data.order ?? 999;
+    const orderB = b.data.order ?? 999;
+    if (orderA !== orderB) return orderA - orderB;
+    return a.data.title.localeCompare(b.data.title, 'ja');
+  });
+---
+
+<aside class="sidebar">
+  <button class="sidebar-toggle" aria-expanded="false">
+    <svg class="toggle-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    記事ナビ
+    <svg class="toggle-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
+      <path d="M4 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <nav class="sidebar-nav">
+    <section class="sidebar-section">
+      <h3 class="sidebar-heading">使い方ガイド</h3>
+      <ul>
+        {guides.map((article) => (
+          <li>
+            <a
+              href={`/${article.id}`}
+              class:list={[{ 'is-current': article.id === currentSlug }]}
+            >
+              {article.data.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="sidebar-section">
+      <h3 class="sidebar-heading">Q地図について</h3>
+      <ul>
+        {pages.map((article) => (
+          <li>
+            <a
+              href={`/${article.id}`}
+              class:list={[{ 'is-current': article.id === currentSlug }]}
+            >
+              {article.data.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="sidebar-section">
+      <h3 class="sidebar-heading">ブログ</h3>
+      <ul>
+        <li>
+          <a href="/posts" class="link-arrow">
+            記事一覧を見る
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </nav>
+</aside>
+
+<script>
+  const toggle = document.querySelector('.sidebar-toggle');
+  const nav = document.querySelector('.sidebar-nav');
+
+  toggle?.addEventListener('click', () => {
+    const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!isExpanded));
+    nav?.classList.toggle('is-open');
+  });
+</script>
+
+<style>
+  .sidebar {
+    width: 240px;
+    flex-shrink: 0;
+  }
+
+  /* ── モバイル用トグルボタン ── */
+  .sidebar-toggle {
+    display: none;
+    width: 100%;
+    padding: 0.7rem 1rem;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #444;
+    text-align: left;
+    align-items: center;
+    gap: 0.4rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .sidebar-toggle:hover {
+    border-color: var(--theme-color);
+  }
+
+  .sidebar-toggle[aria-expanded="true"] {
+    border-color: var(--theme-color);
+    box-shadow: 0 0 0 1px var(--theme-color);
+  }
+
+  .toggle-icon {
+    color: #999;
+    vertical-align: -2px;
+  }
+
+  .toggle-chevron {
+    float: right;
+    color: #999;
+    margin-top: 2px;
+    transition: transform 0.2s;
+  }
+
+  .sidebar-toggle[aria-expanded="true"] .toggle-chevron {
+    transform: rotate(90deg);
+  }
+
+  /* ── サイドバー本体 ── */
+  .sidebar-nav {
+    position: sticky;
+    top: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    padding-right: 0.5rem;
+  }
+
+  /* 細いスクロールバー */
+  .sidebar-nav::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .sidebar-nav::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .sidebar-nav::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 3px;
+  }
+
+  .sidebar-nav::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+  }
+
+  /* ── セクション ── */
+  .sidebar-section {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .sidebar-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  /* ── 見出し ── */
+  .sidebar-heading {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #888;
+    letter-spacing: 0.08em;
+    margin: 0 0 0.4rem 0;
+    padding: 0 0 0.3rem 0;
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--theme-color);
+    display: inline-block;
+  }
+
+  .sidebar-heading::before {
+    content: none;
+  }
+
+  /* ── リンクリスト ── */
+  .sidebar-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidebar-section li {
+    margin: 0;
+  }
+
+  .sidebar-section a {
+    display: block;
+    padding: 0.35rem 0.6rem 0.35rem 0.75rem;
+    font-size: 0.78rem;
+    color: #555;
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    line-height: 1.5;
+    transition: color 0.15s, background-color 0.15s, border-color 0.15s;
+  }
+
+  .sidebar-section a:hover {
+    color: #333;
+    background-color: #fafafa;
+    border-left-color: #e0e0e0;
+  }
+
+  .sidebar-section a.is-current {
+    color: #333;
+    font-weight: 600;
+    background-color: rgba(230, 180, 34, 0.08);
+    border-left-color: var(--theme-color);
+  }
+
+  /* ── ブログ「記事一覧を見る」矢印付きリンク ── */
+  .link-arrow {
+    display: flex !important;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .link-arrow svg {
+    flex-shrink: 0;
+    transition: transform 0.15s;
+  }
+
+  .link-arrow:hover svg {
+    transform: translateX(2px);
+  }
+
+  /* ── モバイル対応 ── */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+    }
+
+    .sidebar-toggle {
+      display: flex;
+    }
+
+    .sidebar-nav {
+      display: none;
+      position: static;
+      max-height: none;
+      overflow-y: visible;
+      margin-top: 0.75rem;
+      padding: 0.75rem 1rem;
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+    }
+
+    .sidebar-nav.is-open {
+      display: block;
+    }
+  }
+</style>

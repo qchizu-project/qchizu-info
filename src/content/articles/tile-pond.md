@@ -3,6 +3,7 @@ title: "全国農業用ため池マップについて"
 description: "全国ほぼ全ての農業用ため池の情報が地図上で閲覧できる「全国農業用ため池マップ」の概要や利用上の注意をQ＆A形式でまとめました。"
 date: 2020-12-07
 type: guide
+order: 20
 ---
 
 **全国農業用ため池マップの閲覧は[こちら](https://maps.qchizu.jp/#6/37.935533/138.120117/&base=pale&ls=pale%7Cmaff-pond20200925-6%7Cmaff-pond20200925-5%7Cmaff-pond20200925-4%7Cmaff-pond20200925-1&disp=11111&lcd=maff-pond20200925-1&vs=c1j0h0k0l0u0t0z0r0s0m0f1&d=m)**
