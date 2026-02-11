@@ -5,25 +5,23 @@ date: 2021-11-13
 type: page
 ---
 
-![](/images/aroPjHCt_400x400-1_0504065535.png)　**地図の閲覧は[こちら](https://maps.qchizu.jp)**　![](https://info.qchizu.jp/wp-content/uploads/2024/05/aroPjHCt_400x400-1_0504065535.png)
+<div style="text-align: center">
 
-[全国Q地図をサポートする](https://info.qchizu.jp/donation/)
+**[地図を開く](https://maps.qchizu.jp)**
 
-*   [![](/images/%E5%85%A8%E5%9B%BD%EF%BC%B1%E5%9C%B0%E5%9B%B3%E3%82%92%E8%A6%8B%E3%82%8B.png "全国Ｑ地図を見る")](https://maps.qchizu.jp)
-*   [![](/images/%E8%B5%A4%E8%89%B2%E7%AB%8B%E4%BD%93%E5%9C%B0%E5%9B%B3%E5%9F%BA%E7%9B%A4%E5%9C%B0%E5%9B%B3%E6%83%85%E5%A0%B1%E6%A8%99%E9%AB%981m%E3%83%A1%E3%83%83%E3%82%B7%E3%83%A5.png "赤色立体地図(基盤地図情報(標高)1mメッシュ)")](https://maps.qchizu.jp/#14/31.923573/130.863733/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2rrim&blend=0&disp=11&lcd=03_dem_52_gsi_all_2025_1_01_dem2rrim&vs=c1g1j0h0k0l0u0t0z0r0s0m0f0)
-*   [![](/images/%E5%85%A8%E5%9B%BD%E6%A9%8B%E6%A2%81%E3%83%9E%E3%83%83%E3%83%97-1.png "全国橋梁マップ")](https://maps.qchizu.jp/#15/32.269789/130.908644/&base=std&ls=std%7Cmlit_road2019_bridge_01&disp=11&lcd=mlit_road2019_bridge_01&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)
-*   [![](/images/%E5%85%A8%E5%9B%BD%E8%BE%B2%E6%A5%AD%E7%94%A8%E3%81%9F%E3%82%81%E6%B1%A0%E3%83%9E%E3%83%83%E3%83%97.png "全国農業用ため池マップ")](https://maps.qchizu.jp/#6/38.091337/137.724609/&base=std&ls=std%7Cmaff-pond20200925-1&disp=11&lcd=maff-pond20200925-1&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)
-*   [![](/images/1%EF%BC%9A3000%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%9C%B0%E5%BD%A2%E5%9B%B3.png "1：3,000東京都地形図")](https://maps.qchizu.jp/#18/35.681340/139.766433/&base=std&ls=std%7C13p_tokyo_01&blend=0&disp=11&lcd=13p_tokyo_01&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)
-*   [![](/images/1%EF%BC%9A5000%E5%A5%88%E8%89%AF%E7%9C%8C%E6%A3%AE%E6%9E%97%E5%9F%BA%E6%9C%AC%E5%9B%B3.png "1：5,000奈良県森林基本図")](https://maps.qchizu.jp/#17/34.008674/135.950097/&base=std&ls=std%7Cnara_pref_f_00_450shimokitayama&blend=0&disp=11&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)
-*   ![](/images/%E4%BB%96%E3%81%AE%E5%9C%B0%E5%9B%B3%E3%81%B8%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E6%A9%9F%E8%83%BD.png "他の地図へのリンク機能")
+[全国Q地図をサポートする](/donation)
+
+</div>
+
+[![全国Ｑ地図を見る](/images/%E5%85%A8%E5%9B%BD%EF%BC%B1%E5%9C%B0%E5%9B%B3%E3%82%92%E8%A6%8B%E3%82%8B.png)](https://maps.qchizu.jp)
 
 ## 新着情報
 
-*   2026.1.17　地形判読のための実体視機能を公開しました。[詳細](https://info.qchizu.jp/qchizu/%e5%85%a8%e5%9b%bdq%e5%9c%b0%e5%9b%b3%e3%81%ae%e6%a9%9f%e8%83%bd/stereo/)
+*   2026.1.17　地形判読のための実体視機能を公開しました。[詳細](/stereo)
 *   2026.1.12　ドメインをqchizu.xyzからqchizu.jpに移行しました。なお、リダイレクトを行っているため、従来のURLでもアクセス可能です（タイル（mapdata.qchizu.xyz及びmapdata.qchizu2.xyz）については、今後移行予定）。
 *   2026.1.10　海上保安庁「海しる」の情報が閲覧できるようになりました。例：[灯台](https://maps.qchizu.jp/#11/31.425734/131.383781/&base=pale&ls=pale%7Cmsil_lights-lighthouse&disp=11&vs=c1g1j0h0k0l0u0t0z0r0s0m0f0&d=m)
 
-これより前の[更新情報](https://info.qchizu.jp/qchizu/update/)
+これより前の[更新情報](/update)
 
 ## 全国Q地図で閲覧できる地図
 
@@ -33,25 +31,25 @@ type: page
 
 ![](/images/image.png)
 
-DEM1Aの[赤色立体地図](https://maps.qchizu.jp/#13/35.372045/138.727455/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2rrim&blend=0&disp=11&lcd=03_dem_52_gsi_all_2025_1_01_dem2rrim&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)、[MPI赤色立体地図](https://maps.qchizu.jp/#13/35.372045/138.727455/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2mpirrim&blend=0&disp=11&lcd=03_dem_52_gsi_all_2025_1_01_dem2mpirrim&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)、[CS立体図](https://maps.qchizu.jp/#13/35.372045/138.727455/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2cs&blend=0&disp=11&lcd=03_dem_52_gsi_all_2025_1_01_dem2cs&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)、[等高線](https://maps.qchizu.jp/#13/35.372045/138.727455/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2contour&disp=11&lcd=03_dem_52_gsi_all_2025_1_01_dem2contour&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)（[紹介ページ](https://info.qchizu.jp/qchizu/tile/rrim/)）
+DEM1Aの[赤色立体地図](https://maps.qchizu.jp/#13/35.372045/138.727455/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2rrim&blend=0&disp=11&lcd=03_dem_52_gsi_all_2025_1_01_dem2rrim&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)、[MPI赤色立体地図](https://maps.qchizu.jp/#13/35.372045/138.727455/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2mpirrim&blend=0&disp=11&lcd=03_dem_52_gsi_all_2025_1_01_dem2mpirrim&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)、[CS立体図](https://maps.qchizu.jp/#13/35.372045/138.727455/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2cs&blend=0&disp=11&lcd=03_dem_52_gsi_all_2025_1_01_dem2cs&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)、[等高線](https://maps.qchizu.jp/#13/35.372045/138.727455/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2contour&disp=11&lcd=03_dem_52_gsi_all_2025_1_01_dem2contour&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)（[紹介ページ](/rrim)）
 
 ### 全国の橋の名前が知りたい！
 
 ![](/images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2021-09-10-221006.png)
 
-全国道路構造物マップシリーズ（[全国橋梁マップ](https://maps.qchizu.jp/#6/36.818080/139.548340/&base=pale&ls=pale%7C04_thematic_55_mlit_road_structures_bridge_2024&disp=11&lcd=04_thematic_55_mlit_road_structures_bridge_2024&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2&d=m)ほか）（[紹介ページ](https://info.qchizu.jp/tile/mlit_road/)）
+全国道路構造物マップシリーズ（[全国橋梁マップ](https://maps.qchizu.jp/#6/36.818080/139.548340/&base=pale&ls=pale%7C04_thematic_55_mlit_road_structures_bridge_2024&disp=11&lcd=04_thematic_55_mlit_road_structures_bridge_2024&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2&d=m)ほか）（[紹介ページ](/road-structures)）
 
 ### 全国の池の名前が知りたい！
 
 ![](/images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2021-09-10-221112.png)
 
-[全国農業用ため池マップ](https://maps.qchizu.jp/#6/38.091337/137.724609/&base=std&ls=std%7Cmaff-pond20200925-1&disp=11&lcd=maff-pond20200925-1&vs=c1j0h0k0l0u0t0z0r0s0m0f1&d=m)（[紹介ページ](https://info.qchizu.jp/tile-pond)）
+[全国農業用ため池マップ](https://maps.qchizu.jp/#6/38.091337/137.724609/&base=std&ls=std%7Cmaff-pond20200925-1&disp=11&lcd=maff-pond20200925-1&vs=c1j0h0k0l0u0t0z0r0s0m0f1&d=m)（[紹介ページ](/tile-pond)）
 
 ### 全国のバス停の名前が知りたい！
 
 ![](/images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2021-09-10-221208.png)
 
-[全国バス停留所マップ](https://maps.qchizu.jp/#6/38.143198/136.691895/&base=pale&ls=pale%7Cksj-busstop2010-01&disp=11&lcd=ksj-busstop2010-01&vs=c0j0h0k0l0u0t0z0r0s0m0f1&d=m)（[紹介ページ](https://info.qchizu.jp/tile/bus-stop/)）
+[全国バス停留所マップ](https://maps.qchizu.jp/#6/38.143198/136.691895/&base=pale&ls=pale%7Cksj-busstop2010-01&disp=11&lcd=ksj-busstop2010-01&vs=c0j0h0k0l0u0t0z0r0s0m0f1&d=m)（[紹介ページ](/bus-stop)）
 
 ### 少し前の地形図を見たい！
 
@@ -95,7 +93,7 @@ DEM1Aの[赤色立体地図](https://maps.qchizu.jp/#13/35.372045/138.727455/&ba
 
 ![](/images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2024-01-07-121017.png)
 
-[全国Ｑ地図MapLibre版](https://maps.qchizu.jp/maplibre/#12.94/35.36053/138.73548) ([紹介ページ](https://info.qchizu.jp/qchizu/maplibre_terrain/))
+[全国Ｑ地図MapLibre版](https://maps.qchizu.jp/maplibre/#12.94/35.36053/138.73548) ([紹介ページ](/maplibre))
 
 ## サイトの特長
 
@@ -105,26 +103,26 @@ DEM1Aの[赤色立体地図](https://maps.qchizu.jp/#13/35.372045/138.727455/&ba
 
 全国Q地図は、防災、教育、各種調査・研究などなど、様々な用途で活用できる各種地形図・地理空間情報を、もっと気軽に閲覧できるようにすることを目的に、個人が運営しているウェブサイトです。
 
-##### 多機能で、多くの方が使い慣れた「地理院地図」と同じ構成のサイトで、旧版地図などの各種地形図が閲覧できます。
+### 多機能で、多くの方が使い慣れた「地理院地図」と同じ構成のサイトで、旧版地図などの各種地形図が閲覧できます。
 
 [GitHubで公開されている地理院地図のソースコード](https://github.com/gsi-cyberjapan/gsimaps)を利用して作成しています。地図の重ね合わせ、２画面表示、計測、図形作成、印刷など、地理院地図の機能がそのまま使えます。
 
-##### オリジナルで作成した地図タイルが閲覧できます。
+### オリジナルで作成した地図タイルが閲覧できます。
 
 これまでwebサイト上に公開されていなかった古い地形図や詳しい地形図等を当サイト独自にタイル化して公開しています。
 
-##### 地理院地図で閲覧できる全てのコンテンツを閲覧できます。
+### 地理院地図で閲覧できる全てのコンテンツを閲覧できます。
 
 例えば、開発前の地形が分かる旧版地図に、旧河道が記された土地条件図を重ね合わせるなど、様々な地形図を組み合わせて利用できます。
 
-##### 全国各地の旧版地図が閲覧できる「今昔マップ」、「東京図測量原図」、「関東地区迅速測図」など、外部のサイトが提供している地図タイルも閲覧できます。
+### 全国各地の旧版地図が閲覧できる「今昔マップ」、「東京図測量原図」、「関東地区迅速測図」など、外部のサイトが提供している地図タイルも閲覧できます。
 
 オリジナルの地図タイル、外部の地図タイルとも、今後順次、充実させていきます。
 
-##### 現在表示している場所を簡単に他の地図サイトで表示できます。
+### 現在表示している場所を簡単に他の地図サイトで表示できます。
 
 右クリックや画面下部のリンクボタンから、Googleマップなど、30以上の地図サイトで表示可能です。
 
 ## 謝辞
 
-[株式会社Geolonia](https://www.geolonia.com/)　[活動資金を御寄付](https://info.qchizu.jp/donation/)いただいた皆様
+[株式会社Geolonia](https://www.geolonia.com/)　[活動資金を御寄付](/donation)いただいた皆様

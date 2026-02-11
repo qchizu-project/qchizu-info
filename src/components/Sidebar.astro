@@ -43,9 +43,9 @@ const pages = allArticles
 
   <nav class="sidebar-nav">
     <section class="sidebar-section">
-      <h3 class="sidebar-heading">使い方ガイド</h3>
+      <h3 class="sidebar-heading">Q地図について</h3>
       <ul>
-        {guides.map((article) => (
+        {pages.map((article) => (
           <li>
             <a
               href={`/${article.id}`}
@@ -59,9 +59,9 @@ const pages = allArticles
     </section>
 
     <section class="sidebar-section">
-      <h3 class="sidebar-heading">Q地図について</h3>
+      <h3 class="sidebar-heading">使い方ガイド</h3>
       <ul>
-        {pages.map((article) => (
+        {guides.map((article) => (
           <li>
             <a
               href={`/${article.id}`}
