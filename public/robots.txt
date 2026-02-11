@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://info.qchizu.jp/sitemap-index.xml

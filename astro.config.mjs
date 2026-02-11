@@ -1,8 +1,10 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://test-info.qchizu.jp',
+  site: 'https://info.qchizu.jp',
   output: 'static',
+  integrations: [sitemap()],
 });
