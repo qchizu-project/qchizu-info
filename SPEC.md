@@ -54,7 +54,7 @@
 
 #### 1. 記事内容の整理
 
-- [ ] **WordPress移行元との内容差分確認**
+- [x] **WordPress移行元との内容差分確認**
   - `temp_*.html`（6件）と対応するMarkdown記事を比較し、未移行の内容を補完
   - 対象: `shinrinkihonzu.md`, `cs.md`, `bus-stop.md`, `elevation-tile.md`, `road-structures.md`, `stereo.md`
   - 確認完了後、`temp_*.html` ファイルを削除

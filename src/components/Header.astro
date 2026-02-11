@@ -4,7 +4,10 @@
 
 <header class="header">
   <div class="header-inner">
-    <a href="/" class="site-title">全国Q地図</a>
+    <a href="/" class="site-title">
+      <img src="/images/logo.png" alt="" class="site-logo" width="32" height="32" />
+      全国Q地図
+    </a>
 
     <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
       <span class="hamburger"></span>
@@ -64,6 +67,15 @@
     font-weight: bold;
     color: #333;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .site-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 0.4rem;
   }
 
   .site-title:hover {

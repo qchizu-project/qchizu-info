@@ -4,15 +4,24 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Sidebar from '../components/Sidebar.astro';
 
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
 interface Props {
   title: string;
   description: string;
   date: Date;
   type?: 'page' | 'guide' | 'post';
   slug?: string;
+  toc?: boolean;
+  headings?: Heading[];
 }
 
-const { title, description, date, type = 'post', slug } = Astro.props;
+const { title, description, date, type = 'post', slug, toc = true, headings = [] } = Astro.props;
+const h2Headings = headings.filter((h) => h.depth === 2);
 
 const formatDate = (date: Date) => {
   return date.toLocaleDateString('ja-JP', {
@@ -43,6 +52,16 @@ const formatDate = (date: Date) => {
           )}
         </header>
         <div class="article-content">
+          {toc && h2Headings.length >= 2 && (
+            <nav class="toc">
+              <h2 class="toc-title">目次</h2>
+              <ul>
+                {h2Headings.map((h) => (
+                  <li><a href={`#${h.slug}`}>{h.text}</a></li>
+                ))}
+              </ul>
+            </nav>
+          )}
           <slot />
         </div>
         {type === 'guide' && (
@@ -112,6 +131,44 @@ const formatDate = (date: Date) => {
 
   .article-content {
     line-height: 1.8;
+  }
+
+  .toc {
+    background: #f9f9f9;
+    border-left: 4px solid var(--theme-color);
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+  }
+
+  .toc-title {
+    font-size: 1rem;
+    margin: 0 0 0.5rem;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #333;
+  }
+
+  .toc ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .toc li {
+    margin: 0.3rem 0;
+  }
+
+  .toc a {
+    color: #555;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .toc a:hover {
+    color: var(--theme-color);
+    text-decoration: underline;
   }
 
   .article-footer {

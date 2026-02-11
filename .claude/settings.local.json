@@ -15,7 +15,28 @@
       "Bash(git push:*)",
       "Bash(done)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git mv:*)",
+      "Bash(gh run:*)",
+      "WebFetch(domain:test-info.qchizu.jp)",
+      "Bash(find:*)",
+      "Bash(tasklist:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill:*)",
+      "Bash(start explorer.exe)",
+      "Bash(powershell -Command \"Stop-Process -Name explorer -Force; Start-Process explorer.exe\")",
+      "Bash(powershell -Command \"Get-Process explorer | Stop-Process -Force\")",
+      "Bash(powershell -Command \"Start-Sleep -Seconds 2; Start-Process explorer.exe\")",
+      "Bash(git rm:*)",
+      "Bash(curl:*)",
+      "Bash(python:*)",
+      "Bash(wc:*)",
+      "Bash(echo:*)",
+      "Bash(del:*)",
+      "Bash(python3:*)",
+      "Bash(cmd /c type:*)",
+      "Bash(cmd /c \"dir /a:*)",
+      "Bash(powershell -Command:*)"
     ]
   }
 }
