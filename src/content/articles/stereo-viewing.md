@@ -12,7 +12,7 @@ order: 60
 
 [すぐに実体視機能を使う](https://maps.qchizu.jp/#14/34.902792/139.089789/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2mpirrim%7Cafm&blend=00&disp=110&lcd=afm&vs=c0g1j0h0k0l0u0t0z0r0s1m0f0&vs2=f0&sync=1&base2=std&ls2=std%7C03_dem_52_gsi_all_2025_1_01_dem2mpirrim&blend2=0&disp2=11&lcd2=03_dem_52_gsi_all_2025_1_01_dem2mpirrim)　※右上の実体視ボタンをONに切り替えてください。
 
-![](/images/image-1.png)
+![](/images/stereo-viewing-1.png)
 
 * * *
 
@@ -37,7 +37,7 @@ order: 60
 作図モードに切り替えると、左画像を変形させないことが可能です。これにより、左画像で判読結果の作図や距離の計測が可能となります。  
 ※**作図や計測は必ず作図モード**に切り替えて行ってください。標準モードでは、左画像も実体視用に変形されているため、正しい位置で作図や計測を行えません。
 
-![](/images/image-2.png)
+![](/images/stereo-viewing-2.png)
 
 * * *
 
@@ -94,7 +94,7 @@ order: 60
 
 「実体視」ボタン右側の歯車アイコンをクリックすると、設定ダイアログが開きます。
 
-![](/images/image-3.png)
+![](/images/stereo-viewing-3.png)
 
 ### 実体視方式
 

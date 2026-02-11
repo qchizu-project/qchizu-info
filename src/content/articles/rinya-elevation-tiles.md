@@ -22,11 +22,11 @@ Terrain-RGBは、
 
 ②については、規格の問題で、標高分解能が0.1mしかないことによるものです。
 
-![](/images/image.png)
+![](/images/rinya-elevation-tiles-1.png)
 
 数値PNGタイルによるもの。
 
-![](/images/image-4.png)
+![](/images/rinya-elevation-tiles-2.png)
 
 Terrain-RGBによるもの。
 
@@ -38,11 +38,11 @@ Terrain-RGBによるもの。
 
 Terrain-RGBの方は、尖ったり蛇行したりしている部分が多いように見受けられます。これが、標高分解能とリサンプリングの違いによるものと思われます。
 
-![](/images/image-1.png)
+![](/images/rinya-elevation-tiles-3.png)
 
 数値PNGタイルによるもの。
 
-![](/images/image-5.png)
+![](/images/rinya-elevation-tiles-4.png)
 
 Terrain-RGBによるもの。
 
@@ -52,11 +52,11 @@ Terrain-RGBによるもの。
 
 Terrain-RGBに傾斜量図と同様の問題が生じているのは、CS立体図は複数の地形表現を重ね合わせて作られていて、その中の一つに傾斜量図が含まれているためです。
 
-![](/images/image-2.png)
+![](/images/rinya-elevation-tiles-5.png)
 
 数値PNGタイルによるもの。
 
-![](/images/image-3.png)
+![](/images/rinya-elevation-tiles-6.png)
 
 Terrain-RGBによるもの。
 
@@ -64,11 +64,11 @@ Terrain-RGBによるもの。
 
 立体表示では、数値PNGタイルとTerrain-RGBで違いは分かりません。
 
-![](/images/image-7.png)
+![](/images/rinya-elevation-tiles-7.png)
 
 数値PNGタイルによるもの。
 
-![](/images/image-6.png)
+![](/images/rinya-elevation-tiles-8.png)
 
 Terrain-RGBによるもの。
 

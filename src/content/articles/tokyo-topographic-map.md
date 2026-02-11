@@ -30,7 +30,7 @@ order: 100
 
 図　建物の表現。「K.K.」は株式会社の略。
 
-![](/images/image-1.png)
+![](/images/tokyo-topographic-map-1.png)
 
 図　首都高速道路が建設される前の日本橋。
 
@@ -54,7 +54,7 @@ order: 100
 
 1962年(昭和37年)に住居表示法が施行され、従来の大字・町名の変更がなされました。東京都1:3,000地形図では住居表示実施前の町名が分かります。作成年が古いレイヤーで確認してください。
 
-![](/images/image-2.png)
+![](/images/tokyo-topographic-map-2.png)
 
 現在の港区六本木五丁目・六丁目付近。住居表示実施前の地名である、麻布材木町、北日ヶ窪町、鳥居坂町、東鳥居坂町などといった町名が記載されている。
 
@@ -64,7 +64,7 @@ order: 100
 
 宅地造成前の地形が確認できます。ハザードマップポータルサイト内の大規模造成地レイヤーと組み合わせ、更に画面下部に表示される標高と比較することで、盛土の深さも分かります。
 
-![](/images/image-3.png)
+![](/images/tokyo-topographic-map-3.png)
 
 画面中央の十字マークの盛土の深さは約17.0mと分かる。（現在の標高76.7mー造成前の標高59.72m）
 
@@ -72,7 +72,7 @@ order: 100
 
 東京都1:3,000地形図は、初期整備後、数年おきに修正が行われています。全国Q地図では、8つのレイヤーに区分して年代ごとに公開しているので、修正前後の地形図を比較することが可能です。
 
-![](/images/image-4.png)
+![](/images/tokyo-topographic-map-4.png)
 
 山が切り開かれ、鶴川団地が造成された。左：1952-1958年レイヤー、右：1969-1970年レイヤー
 
@@ -98,7 +98,7 @@ order: 100
 
 **閲覧は[こちら](https://maps.qchizu.jp/#16/35.680769/139.770126/&base=std&ls=std%7CKanto_Rapid-900913&blend=0&disp=11&lcd=Kanto_Rapid-900913&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2)**
 
-[![](/images/image-7.png)](https://maps.qchizu.jp/#16/35.680769/139.770126/&base=std&ls=std%7CKanto_Rapid-900913&blend=0&disp=11&lcd=Kanto_Rapid-900913&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2)
+[![](/images/tokyo-topographic-map-5.png)](https://maps.qchizu.jp/#16/35.680769/139.770126/&base=std&ls=std%7CKanto_Rapid-900913&blend=0&disp=11&lcd=Kanto_Rapid-900913&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2)
 
 縮尺：1:20,000　測量年：1880年(明治13年)～1886年(明治19年)　作成：陸軍参謀本部
 
@@ -114,7 +114,7 @@ order: 100
 
 **閲覧は[こちら](https://maps.qchizu.jp/#17/35.680320/139.764215/&base=std&ls=std%7CTokyo5000-900913&blend=0&disp=11&lcd=Tokyo5000-900913&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2)**
 
-[![](/images/image-6.png)](https://maps.qchizu.jp/#17/35.680320/139.764215/&base=std&ls=std%7CTokyo5000-900913&blend=0&disp=11&lcd=Tokyo5000-900913&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2)
+[![](/images/tokyo-topographic-map-6.png)](https://maps.qchizu.jp/#17/35.680320/139.764215/&base=std&ls=std%7CTokyo5000-900913&blend=0&disp=11&lcd=Tokyo5000-900913&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2)
 
 縮尺：1:5,000　測量年：1883年(明治16年)-84年(明治17年)　作成：陸軍参謀本部
 
@@ -129,7 +129,7 @@ order: 100
 
 **閲覧は[こちら](https://maps.qchizu.jp/#16/35.681361/139.765642/&base=std&ls=std%7Ck_tokyo50_2man&blend=0&disp=11&lcd=k_tokyo50_2man&vs=c1g1j0h0k0l0u0t0z0r0s0m0f2&d=m)**　※レイヤーで年代切り替え可
 
-![](/images/image-8.png)
+![](/images/tokyo-topographic-map-7.png)
 
 縮尺：1:25,000（一部1:20,000、1:50,000）　測量年：1890年代-2000年代　作成：国土地理院、地理調査所、陸地測量部
 

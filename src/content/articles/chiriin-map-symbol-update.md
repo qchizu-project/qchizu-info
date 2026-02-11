@@ -15,7 +15,7 @@ type: post
 
 なお、平成14年図式では、「かれ川とは、通常、水の流れていない川をいい、断続している河川の流路を明示する場合に適用する。最上流部には適用しない。」とされていました。
 
-![](/images/image-6-1024x210.png)
+![](/images/chiriin-map-symbol-update-1.png)
 
 左：2024年一部改正、右2019年一部改正
 
@@ -23,7 +23,7 @@ type: post
 
 特殊鉄道の記号は、「鉄道事業法に基づく専用鉄道に該当しないものに適用する」旨が明示されました。なお、従来から、鉄道事業法に基づく鉄道は、普通鉄道の記号を適用するとされていたため、この変更に伴う表示の変更はないものと思われます。
 
-![](/images/image-1-1024x256.png)
+![](/images/chiriin-map-symbol-update-2.png)
 
 左：2024年一部改正、右2019年一部改正
 
@@ -31,25 +31,25 @@ type: post
 
 平成14年図式まで存在した、水面下の珊瑚礁を示す青い隠顕岩の記号が復活しました。今回の図式変更で一番の変更点と思います。
 
-![](/images/image-2-1024x136.png)
+![](/images/chiriin-map-symbol-update-3.png)
 
 左：2024年一部改正、右2019年一部改正
 
 この記号は、沖縄県の宮古島周辺（八重干瀬など）で使用されています。例えば、「ウルグス」という注記は、何を指すか不明瞭でしたが、青い隠顕岩の記号が復活したことで、何を指しているかが明確になりました。
 
-[![](/images/image-4.png)](https://maps.qchizu.jp/#15/24.978336/125.261199/&base=std&ls=std&disp=1&vs=c1g1j0h0k0l0u0t0z0r0s1m0f0&vs2=f0&sync=1&base2=ort&ls2=ort%7C99gsi_std_04&blend2=0&disp2=11&lcd2=99gsi_std_04)
+[![](/images/chiriin-map-symbol-update-4.png)](https://maps.qchizu.jp/#15/24.978336/125.261199/&base=std&ls=std&disp=1&vs=c1g1j0h0k0l0u0t0z0r0s1m0f0&vs2=f0&sync=1&base2=ort&ls2=ort%7C99gsi_std_04&blend2=0&disp2=11&lcd2=99gsi_std_04)
 
 左：2024年6月9日時点、右：2023年9月時点
 
 ちなみに、このエリアの水面下の珊瑚礁は、空中写真にもはっきりと写っています。
 
-[![](/images/image-5.png)](https://maps.qchizu.jp/#15/24.978336/125.261199/&base=std&ls=std&disp=1&vs=c1g1j0h0k0l0u0t0z0r0s1m0f0&vs2=f0&sync=1&base2=ort&ls2=ort&disp2=1)
+[![](/images/chiriin-map-symbol-update-5.png)](https://maps.qchizu.jp/#15/24.978336/125.261199/&base=std&ls=std&disp=1&vs=c1g1j0h0k0l0u0t0z0r0s1m0f0&vs2=f0&sync=1&base2=ort&ls2=ort&disp2=1)
 
 ## 使用する文字
 
 こちらも変更されています。
 
-![](/images/image-3-1024x90.png)
+![](/images/chiriin-map-symbol-update-6.png)
 
 1.  「平成24年」というのは、図式が使われ始めた年で、現在も使用されている図式です。 [↩︎](#5b8b95b1-a030-4bf3-90c6-d6399247eb96-link)
 2.  平成24年電子地形図25000図式（表示基準）令和元年6月14日一部改正 [↩︎](#5a92d535-850b-4875-a2e0-95541b2fb7cd-link)

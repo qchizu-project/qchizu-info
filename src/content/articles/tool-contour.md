@@ -10,7 +10,7 @@ order: 110
 
 [等高線を見る](https://maps.qchizu.jp/#12/35.361196/138.731575/&ls=std%7Cgsj_land_dem2rrim%2C0.5%7Cgsj_land_dem2contour&blend=0&disp=011&lcd=gsj_land_dem2contour&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)（産総研シームレス標高タイル陸域統合DEMによる等高線。背景は、赤色立体地図を濃度50%で表示しています。）
 
-![](/images/image-4.png)
+![](/images/tool-contour-1.png)
 
 ## 全国Q地図でできること
 
@@ -43,7 +43,7 @@ order: 110
 
 本機能は、標高値をRGB値として記録した地図タイルである「標高タイル」をもとに、ブラウザ上で演算を行って等高線を生成する仕組みを採用しています。
 
-![](/images/image-5.png)
+![](/images/tool-contour-2.png)
 
 左側が標高タイルでRGB値に標高値が格納されている。右側が標高タイルから生成した等高線。
 
@@ -53,7 +53,7 @@ order: 110
 
 航空レーザ測量による標高データが整備されているエリアでは、高精度な等高線の表示が可能です。
 
-![](/images/image-2.png)
+![](/images/tool-contour-3.png)
 
 地形図の等高線では表現されていない、細かな谷や尾根、ピークが表現されている(DEM5A)。
 
@@ -69,4 +69,4 @@ order: 110
 
 地形図に滝の記号がなくても、谷の部分で等高線が密になっている部分には滝があることが多くあります。
 
-[![](/images/image-3.png)](https://maps.qchizu.jp/#18/33.096427/131.337470/&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2rrim%2C0.5%7C03_dem_52_gsi_all_2025_1_01_dem2contour&blend=0&disp=011&lcd=03_dem_52_gsi_all_2025_1_01_dem2contour&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1)
+[![](/images/tool-contour-4.png)](https://maps.qchizu.jp/#18/33.096427/131.337470/&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2rrim%2C0.5%7C03_dem_52_gsi_all_2025_1_01_dem2contour&blend=0&disp=011&lcd=03_dem_52_gsi_all_2025_1_01_dem2contour&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1)

@@ -8,7 +8,7 @@ order: 50
 
 全国Q地図では、2025年6月22日から全国の**赤色立体地図**、**CS立体図**などの微地形表現図の閲覧ができるようになりました。
 
-[![](/images/image-3.png)](https://maps.qchizu.jp/#15/34.904147/139.095411/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2rrim&blend=0&disp=11&lcd=03_dem_52_gsi_all_2025_1_01_dem2rrim&vs=c1g1j0h0k0l0u0t0z0r0s0m0f0&d=m)
+[![](/images/rrim-cs-viewer-1.png)](https://maps.qchizu.jp/#15/34.904147/139.095411/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2rrim&blend=0&disp=11&lcd=03_dem_52_gsi_all_2025_1_01_dem2rrim&vs=c1g1j0h0k0l0u0t0z0r0s0m0f0&d=m)
 
 **すぐに地図を見たい方はこちらのリンクから**  
 **全国**  
@@ -51,7 +51,7 @@ order: 50
 
 ## 赤色立体地図について
 
-![](/images/image-4.png)
+![](/images/rrim-cs-viewer-2.png)
 
 **赤色立体地図**は、傾斜の急な面を赤く、尾根は明るく谷は暗くなるように表現した地形表現手法です。等高線が読めなくても直感的に誰でも地形を理解でき、等高線では表現が困難な微細な地形の起伏も表現できるという特長があります。
 
@@ -68,7 +68,7 @@ order: 50
 
 ## MPI赤色立体地図について
 
-![](/images/rrim-mpi.png)
+![](/images/rrim-cs-viewer-3.png)
 
 MPI赤色立体地図は、従来の赤色立体地図を改良した地形表現手法です。傾斜の急な面を赤く表現する基本的な特徴は従来の赤色立体地図と同じですが、表現に一部改善が行われています。
 
@@ -87,7 +87,7 @@ MPI赤色立体地図について詳しくは、以下を参照してくださ�
 
 ## CS立体図について
 
-![](/images/image-5.png)
+![](/images/rrim-cs-viewer-4.png)
 
 **CS立体図**は、地形の曲率（Curvature）と傾斜（Slope）を組み合わせた立体表現です。尾根が赤く、谷が青く表現されます。
 
@@ -99,7 +99,7 @@ MPI赤色立体地図について詳しくは、以下を参照してくださ�
 
 本機能は、標高値をRGB値として記録した地図タイルである「標高タイル」をもとに、ブラウザ上で演算を行って赤色立体地図等の画像を生成する仕組みを採用しています。
 
-![](/images/rrim-mechanism.png)
+![](/images/rrim-cs-viewer-5.png)
 
 ※上図中の立体表示については、[全国Q地図MapLibre版](/maplibre-viewer)で可能です。
 
@@ -127,7 +127,7 @@ MPI赤色立体地図について詳しくは、以下を参照してくださ�
 
 **A:** 可能です。PCで表示し、画面右上の「印刷」ボタンから赤色立体地図やCS立体図の印刷が可能です。また、「共有」ボタン→「表示している地図を画像として保存します」をクリックし、赤色立体地図やCS立体図の画像のダウンロードが可能です。
 
-![](/images/rrim-download.png)
+![](/images/rrim-cs-viewer-6.png)
 
 画像のダウンロード機能。ワールドファイルもダウンロード可能です。
 
@@ -143,7 +143,7 @@ MPI赤色立体地図について詳しくは、以下を参照してくださ�
 
 **方法２（推奨）**：赤色立体地図などを背景図として、作図をしたいといった用途であれば、**全国Q地図（地理院地図）の作図機能を利用可能**です。図形をGeoJSONファイルとしてダウンロードしたり、既存のGeoJSONを読み込むことも可能です。
 
-![](/images/rrim-drawing.png)
+![](/images/rrim-cs-viewer-7.png)
 
 作図の一例
 
@@ -163,7 +163,7 @@ MPI赤色立体地図について詳しくは、以下を参照してくださ�
 
 例えば、下図の左画面のように、[DEM1A（航空レーザ1mメッシュ）による赤色立体地図](https://maps.qchizu.jp//#13/32.891624/131.358891/&base=std&ls=std%7C03_dem_52_gsi_all_2025_1_01_dem2rrim&blend=0&disp=11&lcd=03_dem_52_gsi_all_2025_1_01_dem2rrim&vs=c1g1j0h0k0l0u0t0z0r0s0m0f0)が表示されないエリアでは、[DEM5A（航空レーザ5mメッシュ）](https://maps.qchizu.jp//#13/32.891624/131.358891/&base=std&ls=std%7Cgsi_dem5a_dem2rrim&blend=0&disp=11&lcd=gsi_dem5a_dem2rrim&vs=c1g1j0h0k0l0u0t0z0r0s0m0f0&d=m)など、他のデータソースで閲覧してみてください。
 
-![](/images/rrim-dem-comparison.png)
+![](/images/rrim-cs-viewer-9.png)
 
 ### Q8: 赤色立体地図の権利関係は問題ありませんか？
 
@@ -181,7 +181,7 @@ MPI赤色立体地図について詳しくは、以下を参照してくださ�
 
 地理院地図で閲覧できる赤色立体地図は、DEM10B（地形図の等高線）を使ったものです（下図の左側）。全国Q地図では、航空レーザによる詳細な標高データを使った赤色立体地図が閲覧可能です（下図の右側）。
 
-![](/images/image-2.png)
+![](/images/rrim-cs-viewer-8.png)
 
 ### Q12: 実体視は可能ですか？
 
