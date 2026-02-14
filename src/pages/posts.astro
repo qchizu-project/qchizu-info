@@ -3,11 +3,12 @@ import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Sidebar from '../components/Sidebar.astro';
 
 const articles = await getCollection('articles');
-const posts = articles.filter(article => article.data.type === 'post');
-const sortedPosts = posts.sort((a, b) =>
-  new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+const posts = articles.filter((article) => article.data.type === 'post');
+const sortedPosts = posts.sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
 
 const formatDate = (date: Date) => {
@@ -21,34 +22,48 @@ const formatDate = (date: Date) => {
 
 <Base title="ブログ" description="全国Q地図の技術記事・ブログ一覧です。">
   <Header />
-  <main>
-    <h1>ブログ</h1>
-    <p class="description">全国Q地図に関する技術記事を投稿しています。</p>
-    <p class="count">全 {posts.length} 記事</p>
-    <ul class="post-list">
-      {sortedPosts.map((post) => (
-        post.data.title && (
-          <li>
-            <time class="date" datetime={post.data.date.toISOString()}>
-              {formatDate(post.data.date)}
-            </time>
-            <a href={`/${post.id}`} class="title">{post.data.title}</a>
-          </li>
-        )
-      ))}
-    </ul>
-  </main>
+  <div class="page-layout">
+    <Sidebar currentType="post" />
+    <main>
+      <h1>ブログ</h1>
+      <p class="count">全 {posts.length} 記事</p>
+      <ul class="article-list">
+        {sortedPosts.map((post) => (
+          post.data.title && (
+            <li>
+              <time class="date" datetime={post.data.date.toISOString()}>
+                {formatDate(post.data.date)}
+              </time>
+              <a href={`/${post.id}`} class="title">{post.data.title}</a>
+            </li>
+          )
+        ))}
+      </ul>
+    </main>
+  </div>
   <Footer />
 </Base>
 
 <style>
-  h1 {
-    margin-bottom: 0.5rem;
+  .page-layout {
+    display: flex;
+    width: 100%;
+    max-width: var(--max-width-with-sidebar);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    gap: 2rem;
   }
 
-  .description {
-    color: #666;
-    margin-bottom: 0.25rem;
+  .page-layout :global(main) {
+    flex: 1;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+
+  h1 {
+    margin-bottom: 0.5rem;
   }
 
   .count {
@@ -57,13 +72,13 @@ const formatDate = (date: Date) => {
     margin-bottom: 1.5rem;
   }
 
-  .post-list {
+  .article-list {
     list-style: none;
     padding: 0;
     margin: 0;
   }
 
-  .post-list li {
+  .article-list li {
     padding: 1rem 0;
     border-bottom: 1px solid #eee;
     display: flex;
@@ -71,7 +86,7 @@ const formatDate = (date: Date) => {
     gap: 0.25rem;
   }
 
-  .post-list li:first-child {
+  .article-list li:first-child {
     border-top: 1px solid #eee;
   }
 
@@ -88,7 +103,7 @@ const formatDate = (date: Date) => {
   }
 
   @media (min-width: 640px) {
-    .post-list li {
+    .article-list li {
       flex-direction: row;
       align-items: baseline;
       gap: 1.5rem;
@@ -96,6 +111,12 @@ const formatDate = (date: Date) => {
 
     .date {
       min-width: 150px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .page-layout {
+      flex-direction: column;
     }
   }
 </style>
