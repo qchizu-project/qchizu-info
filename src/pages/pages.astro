@@ -6,25 +6,25 @@ import Footer from '../components/Footer.astro';
 import Sidebar from '../components/Sidebar.astro';
 
 const articles = await getCollection('articles');
-const guides = articles
-  .filter((a) => a.data.type === 'guide')
+const pages = articles
+  .filter((a) => a.data.type === 'page' && a.id !== 'home')
   .sort((a, b) => {
     const orderA = a.data.order ?? 999;
     const orderB = b.data.order ?? 999;
     if (orderA !== orderB) return orderA - orderB;
-    return a.data.date.getTime() - b.data.date.getTime();
+    return a.data.title.localeCompare(b.data.title, 'ja');
   });
 ---
 
-<Base title="使い方ガイド" description="全国Q地図の使い方ガイド一覧です。">
+<Base title="Q地図について" description="全国Q地図のサイト情報一覧です。">
   <Header />
   <div class="page-layout">
-    <Sidebar currentType="guide" />
+    <Sidebar currentType="page" />
     <main>
-      <h1>使い方ガイド</h1>
-      <p class="count">全 {guides.length} 記事</p>
+      <h1>Q地図について</h1>
+      <p class="count">全 {pages.length} 記事</p>
       <ul class="article-list">
-        {guides.map((article) => (
+        {pages.map((article) => (
           <li>
             <a href={`/${article.id}`} class="title">{article.data.title}</a>
           </li>
