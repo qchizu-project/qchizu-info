@@ -42,7 +42,21 @@
       "Bash(npm run dev:*)",
       "Bash(npx astro dev --host)",
       "Bash(ls:*)",
-      "Bash(git merge:*)"
+      "Bash(git merge:*)",
+      "Bash(git branch:*)",
+      "Bash(gh repo edit:*)",
+      "Bash(gh api:*)",
+      "Bash(gh pr list:*)",
+      "WebFetch(domain:www.npmjs.com)",
+      "Bash(npm install:*)",
+      "Bash(npx playwright install:*)",
+      "Bash(timeout:*)",
+      "Bash(node -e:*)",
+      "Bash(gh pr comment:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh repo view:*)",
+      "Bash(git pull:*)",
+      "Bash(vercel:*)"
     ]
   }
 }
