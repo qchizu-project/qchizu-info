@@ -3,9 +3,10 @@ import { getCollection } from 'astro:content';
 
 interface Props {
   currentSlug?: string;
+  currentType?: string;
 }
 
-const { currentSlug } = Astro.props;
+const { currentSlug, currentType } = Astro.props;
 
 const allArticles = await getCollection('articles');
 
@@ -28,6 +29,13 @@ const pages = allArticles
     if (orderA !== orderB) return orderA - orderB;
     return a.data.title.localeCompare(b.data.title, 'ja');
   });
+
+// post型: 日付降順でソート
+const posts = allArticles
+  .filter((a) => a.data.type === 'post')
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const isBlogExpanded = currentType === 'post';
 ---
 
 <aside class="sidebar">
@@ -43,7 +51,7 @@ const pages = allArticles
 
   <nav class="sidebar-nav">
     <section class="sidebar-section">
-      <h3 class="sidebar-heading">Q地図について</h3>
+      <h3 class="sidebar-heading"><a href="/pages">Q地図について</a></h3>
       <ul>
         {pages.map((article) => (
           <li>
@@ -59,7 +67,7 @@ const pages = allArticles
     </section>
 
     <section class="sidebar-section">
-      <h3 class="sidebar-heading">使い方ガイド</h3>
+      <h3 class="sidebar-heading"><a href="/guides">使い方ガイド</a></h3>
       <ul>
         {guides.map((article) => (
           <li>
@@ -75,17 +83,26 @@ const pages = allArticles
     </section>
 
     <section class="sidebar-section">
-      <h3 class="sidebar-heading">ブログ</h3>
-      <ul>
-        <li>
-          <a href="/posts" class="link-arrow">
-            記事一覧を見る
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-        </li>
-      </ul>
+      <details class="blog-details" open={isBlogExpanded}>
+        <summary class="blog-summary">
+          <h3 class="sidebar-heading"><a href="/posts">ブログ</a></h3>
+          <svg class="blog-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M4 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+        <ul>
+          {posts.map((post) => (
+            <li>
+              <a
+                href={`/${post.id}`}
+                class:list={[{ 'is-current': post.id === currentSlug }]}
+              >
+                {post.data.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </details>
     </section>
   </nav>
 </aside>
@@ -204,6 +221,16 @@ const pages = allArticles
     display: inline-block;
   }
 
+  .sidebar-heading a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .sidebar-heading a:hover {
+    color: #555;
+  }
+
   .sidebar-heading::before {
     content: none;
   }
@@ -243,20 +270,35 @@ const pages = allArticles
     border-left-color: var(--theme-color);
   }
 
-  /* ── ブログ「記事一覧を見る」矢印付きリンク ── */
-  .link-arrow {
-    display: flex !important;
+  /* ── ブログ折りたたみ ── */
+  .blog-details {
+    margin: 0;
+  }
+
+  .blog-summary {
+    display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0.4rem;
+    cursor: pointer;
+    list-style: none;
   }
 
-  .link-arrow svg {
+  .blog-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .blog-summary::marker {
+    content: '';
+  }
+
+  .blog-chevron {
+    color: #bbb;
+    transition: transform 0.2s;
     flex-shrink: 0;
-    transition: transform 0.15s;
   }
 
-  .link-arrow:hover svg {
-    transform: translateX(2px);
+  .blog-details[open] .blog-chevron {
+    transform: rotate(90deg);
   }
 
   /* ── モバイル対応 ── */

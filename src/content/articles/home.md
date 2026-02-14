@@ -69,7 +69,8 @@ DEM1Aの[赤色立体地図](https://maps.qchizu.jp/#13/35.372045/138.727455/&ba
 [1896-1900年 下関・北九州(1万分1)](https://maps.qchizu.jp/#11/33.916868/130.860901/&base=std&ls=std%7Cshimonoseki10000-01&blend=0&disp=11&lcd=shimonoseki10000-01&vs=c1j0h0k0l0u0t0z0r0s0m0f1&d=m)  
 [1887年 迅速測図・小倉近傍(5万分1)](https://maps.qchizu.jp/#10/33.774011/130.705719/&base=std&ls=std%7C00kokura50000-merge&blend=0&disp=11&lcd=00kokura50000-merge&vs=c1j0h0k0l0u0t0z0r0s0m0f1&d=m)  
 [1894年 迅速測図・福岡近傍(5万分1)](https://maps.qchizu.jp/#11/33.472977/130.513458/&base=std&ls=std%7C00fukuoka50000-merge&blend=0&disp=11&lcd=00fukuoka50000-merge&vs=c1j0h0k0l0u0t0z0r0s0m0f1&d=m)  
-※「今昔マップ」フォルダ、「ひなたGIS」リンクボタンからも閲覧できます。
+> [!NOTE]
+> 「今昔マップ」フォルダ、「ひなたGIS」リンクボタンからも閲覧できます。
 
 ### 詳しい地形図が見たい！(都市計画基図、市町村全図、森林基本図等)
 
@@ -130,7 +131,8 @@ DEM1Aの[赤色立体地図](https://maps.qchizu.jp/#13/35.372045/138.727455/&ba
 
 10万円以上の[御支援](/donation)をいただいた場合も、Q地図パートナーとして1年間掲載いたします。
 
-※Q地図パートナーは、全国Q地図への感謝を表すものであり、広告ではありません。
+> [!NOTE]
+> Q地図パートナーは、全国Q地図への感謝を表すものであり、広告ではありません。
 
 ## 謝辞
 

@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.0",
-    "astro": "^5.16.11"
+    "astro": "^5.16.11",
+    "remark-github-blockquote-alert": "^2.0.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@playwright/test": "^1.58.2"
+  }
 }
