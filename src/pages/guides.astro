@@ -1,0 +1,105 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const articles = await getCollection('articles');
+const guides = articles.filter(article => article.data.type === 'guide');
+const sortedGuides = guides.sort((a, b) => {
+  // orderが指定されている場合はそれを優先
+  if (a.data.order !== undefined && b.data.order !== undefined) {
+    return a.data.order - b.data.order;
+  }
+  if (a.data.order !== undefined) return -1;
+  if (b.data.order !== undefined) return 1;
+  // orderがない場合は日付順
+  return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
+---
+
+<Base title="使い方ガイド" description="全国Q地図の機能説明・使い方ガイド一覧です。">
+  <Header />
+  <main>
+    <h1>使い方ガイド</h1>
+    <p class="description">全国Q地図の機能やコンテンツについて解説しています。</p>
+    <p class="count">全 {guides.length} 記事</p>
+    <ul class="guide-list">
+      {sortedGuides.map((guide) => (
+        guide.data.title && (
+          <li>
+            <a href={`/${guide.id}`} class="guide-item">
+              <span class="title">{guide.data.title}</span>
+              {guide.data.description && (
+                <span class="description">{guide.data.description.slice(0, 80)}...</span>
+              )}
+            </a>
+          </li>
+        )
+      ))}
+    </ul>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  main > .description {
+    color: #666;
+    margin-bottom: 0.25rem;
+  }
+
+  .count {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .guide-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .guide-list li {
+    border-bottom: 1px solid #eee;
+  }
+
+  .guide-list li:first-child {
+    border-top: 1px solid #eee;
+  }
+
+  .guide-item {
+    display: block;
+    padding: 1rem 0;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+
+  .guide-item:hover {
+    background-color: #fafafa;
+  }
+
+  .title {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #0066cc;
+    line-height: 1.4;
+    margin-bottom: 0.25rem;
+  }
+
+  .guide-item:hover .title {
+    color: #cc0033;
+  }
+
+  .guide-item .description {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+  }
+</style>
