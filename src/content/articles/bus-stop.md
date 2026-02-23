@@ -114,4 +114,4 @@ order: 90
 
 利用に当たっては、国土数値情報の規約に従ってください。
 
-[全国バス停留所一覧（全国Q地図）](https://info.qchizu.jp/wp-content/uploads/2021/01/全国バス停留所一覧（全国Q地図）-1.xlsx)[ダウンロード](https://info.qchizu.jp/wp-content/uploads/2021/01/全国バス停留所一覧（全国Q地図）-1.xlsx)
+[全国バス停留所一覧（全国Q地図）](/files/bus-stop-list.xlsx)[ダウンロード](/files/bus-stop-list.xlsx)

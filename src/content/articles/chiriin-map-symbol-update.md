@@ -54,4 +54,4 @@ type: post
 1.  「平成24年」というのは、図式が使われ始めた年で、現在も使用されている図式です。 [↩︎](#5b8b95b1-a030-4bf3-90c6-d6399247eb96-link)
 2.  平成24年電子地形図25000図式（表示基準）令和元年6月14日一部改正 [↩︎](#5a92d535-850b-4875-a2e0-95541b2fb7cd-link)
 
-[平成24年電子地形図25000図式（表示基準）令和元年6月14日一部改正](https://info.qchizu.jp/wp-content/uploads/2024/06/平成24年電子地形図25000図式（表示基準）.pdf)[ダウンロード](https://info.qchizu.jp/wp-content/uploads/2024/06/平成24年電子地形図25000図式（表示基準）.pdf)
+[平成24年電子地形図25000図式（表示基準）令和元年6月14日一部改正](/files/denshi-chikei25000-zushiki.pdf)[ダウンロード](/files/denshi-chikei25000-zushiki.pdf)
