@@ -47,6 +47,12 @@ describe("リンク検証", () => {
         if (cleanPath.startsWith("images/")) continue;
 
         it(`内部リンク /${linkPath} が有効`, () => {
+          // /info/ プレフィックスの二重付与防止チェック
+          assert.ok(
+            !cleanPath.startsWith('info/'),
+            `内部リンク /${linkPath} に /info/ プレフィックスが含まれています（remarkプラグインが二重付与します）`
+          );
+
           const isSlug = slugs.has(cleanPath);
           const isKnownPage = knownPages.has(cleanPath);
           assert.ok(
