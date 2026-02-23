@@ -2,6 +2,5 @@ User-agent: *
 Allow: /
 Sitemap: https://info.qchizu.jp/sitemap-index.xml
 
-# LLM向け情報
-# https://llmstxt.org/
-Llms-Txt: https://info.qchizu.jp/llms.txt
+# LLM向け情報: https://info.qchizu.jp/llms.txt
+# 仕様: https://llmstxt.org/

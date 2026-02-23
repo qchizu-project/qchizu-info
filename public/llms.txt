@@ -16,7 +16,8 @@
 - [全国バス停留所マップ](https://info.qchizu.jp/bus-stop): 全国のバス停留所の情報を閲覧可能
 - [Q地図地形ビューアー（MapLibre版）](https://info.qchizu.jp/maplibre-viewer): MapLibre GL JSを使った3D地形表示、等高線、段彩図、陰影図、傾斜量図、CS立体図の表示に対応
 - [実体視機能](https://info.qchizu.jp/stereo-viewing): 空中写真の実体視（ステレオ閲覧）に対応
-- [各地の旧版地形図](https://info.qchizu.jp/tokyo-topographic-map): 都市計画基図、森林基本図等の詳細な地形図を閲覧可能
+- [東京都地形図](https://info.qchizu.jp/tokyo-topographic-map): 東京都の都市計画基図等の詳細な地形図を閲覧可能
+- [各地の森林基本図](https://info.qchizu.jp/forest-basemap): 各県の森林基本図を閲覧可能
 
 ## タイル配信API
 
@@ -55,7 +56,6 @@ Q地図タイルは、XYZタイル形式で配信しています。QGIS、地理
 
 ## 使い方ガイド
 
-- [赤色立体地図・CS立体図の見方](https://info.qchizu.jp/rrim-cs-viewer): 微地形表現図の活用方法
 - [CS立体図パラメータ解説](https://info.qchizu.jp/cs-parameter): CS立体図のパラメータ設定の詳細
 - [標高タイルの規格比較](https://info.qchizu.jp/elevation-tile): 数値PNGタイル、Mapbox Terrain-RGB、Terrainiumの比較
 - [等高線作成ツール](https://info.qchizu.jp/tool-contour): 等高線の生成方法
