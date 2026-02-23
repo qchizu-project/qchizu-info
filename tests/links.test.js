@@ -45,6 +45,8 @@ describe("リンク検証", () => {
 
         // /images/ で始まるリンクは画像チェック側で処理
         if (cleanPath.startsWith("images/")) continue;
+        // /files/ で始まるリンクは静的ファイルへの参照
+        if (cleanPath.startsWith("files/")) continue;
 
         it(`内部リンク /${linkPath} が有効`, () => {
           // /info/ プレフィックスの二重付与防止チェック
