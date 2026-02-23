@@ -8,13 +8,24 @@ const topPage = await getEntry('articles', 'home');
 const { Content } = topPage ? await render(topPage) : { Content: null };
 ---
 
-<Base title="全国Q地図" description="地理院地図を拡張した、各種地形図・地図情報の統合閲覧サイト">
+<Base
+  title="全国Q地図"
+  description="地理院地図を拡張した、各種地形図・地図情報の統合閲覧サイト"
+>
   <Header />
   <main>
     <div class="top-content">
       {Content ? <Content /> : <p>コンテンツが見つかりません。</p>}
     </div>
-    <p class="articles-link"><a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/pages`}>Q地図について</a>　|　<a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/guides`}>ガイド一覧</a>　|　<a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/posts`}>ブログ一覧</a></p>
+    <p class="articles-link">
+      <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/pages`}
+        >Q地図について</a
+      >　|　<a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/guides`}
+        >ガイド一覧</a
+      >　|　<a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/posts`}
+        >ブログ一覧</a
+      >
+    </p>
   </main>
   <Footer />
 </Base>
